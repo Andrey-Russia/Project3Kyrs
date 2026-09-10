@@ -3,6 +3,7 @@ using UnityEngine;
 public class CargoBeacon : MonoBehaviour
 {
     [SerializeField] private BeaconTargetType _targetType = BeaconTargetType.Light;
+    [SerializeField] private BlinkMode _currentBlinkMode = BlinkMode.Fast;
 
     [SerializeField] private Light _targetLight;
     [SerializeField] private Renderer _targetRenderer;
@@ -17,8 +18,6 @@ public class CargoBeacon : MonoBehaviour
 
     [SerializeField] private float _fastModeDuration = 3.0f;
     [SerializeField] private float _longModeDuration = 8.0f;
-
-    [SerializeField] private BlinkMode _currentBlinkMode = BlinkMode.Fast;
 
     private Material _material;
     private float _modeTimer;
